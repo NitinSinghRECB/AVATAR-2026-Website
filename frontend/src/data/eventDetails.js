@@ -75,7 +75,7 @@ export const eventDetailsData = {
       "Real-World Application (15%)",
       "Presentation (20%)"
     ],
-    coordinators: ["Harish Rajput", "Aman Kumar", "Arnav Singh"],
+    coordinators: ["Aman Kumar", "Arnav Singh"],
     volunteers: ["Yogesh Singh", "Dhirendra Bind", "Satyam Maurya", "Kaushal Patel", "Mohit Kumar", "Gokul Chaurasiya"]
   },
   "circuit-hard": {
@@ -101,7 +101,7 @@ export const eventDetailsData = {
       "Debug Time and Accuracy",
       "Demonstration of Principles"
     ],
-    coordinators: ["Harish Rajput", "Aman Kumar", "Arnav Singh"],
+    coordinators: ["Harish Rajput", "Pratham Jain"],
     volunteers: ["Tathagat Azad"]
   },
   "treasure": {
@@ -254,7 +254,7 @@ export const eventDetailsData = {
       "The robot that completes the track in the shortest total time wins."
     ],
     coordinators: ["Lucky Singh", "Samarth Gupta"],
-    volunteers: ["Anil Kumar", "Ayush Kumar", "Akash Jaiswal", "Ankit Dubey", "Chhatrasal Singh", "Pappu Kumar", "Ali Ashab Shah", "Dhirendra Bind", "Satyam Maurya", "Prashant Kumar"]
+    volunteers: ["Anil Kumar", "Ayush Kumar", "Akash Jaiswal", "Dubey Ankit Dilip", "Chhatrasal Singh", "Pappu Kumar", "Ali Ashab Shah", "Dhirendra Bind", "Satyam Maurya", "Prashant Kumar"]
   },
   "rocket": {
     id: "rocket",
@@ -278,7 +278,7 @@ export const eventDetailsData = {
       "Flight Stability and Trajectory",
       "Build Quality and Drag Efficiency"
     ],
-    coordinators: ["Pradeep Chaudhary"],
+    coordinators: ["Pratham Jain", "Sameer Deewakar", "Divyansh Pandey", "Yashnil Singh", "Abhishek Gangwar"],
     volunteers: ["Rovins Nigam", "Nitin Verma", "Manish Nishad", "Nandini Chaturvedi", "Astha Gupta"]
   },
   "prompt": {

@@ -37,7 +37,8 @@ const TeamPage = () => {
     'Astha Gupta', 'Nandini Chaturvedi', 'Anil Kumar', 'Shubham Yadav', 'Asha Gautam', 
     'Raksha', 'Himanshi Verma', 'Meera', 'Prakash Kumar', 'Ashutosh Kumar', 
     'Avneesh Kumar', 'Raunak Pandey', 'Abhay Maurya', 'Annu Dutt', 'Aashka Pratap', 
-    'Jeetu Verma'
+    'Jeetu Verma', 'Aniruddh Yadav', 'Akash Jaiswal', 'Rovins Nigam', 'Gokul Chaurasiya', 
+    'Tathagat Azad', 'Kirti Yadav', 'Shivansh Srivastava'
   ];
 
   return (
