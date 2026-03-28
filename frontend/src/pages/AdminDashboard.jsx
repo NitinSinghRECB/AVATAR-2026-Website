@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../config';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {
@@ -18,7 +19,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem('adminToken');
       if (!token) { navigate('/admin'); return; }
 
-      const { data } = await axios.get('http://localhost:5000/api/registrations', {
+      const { data } = await axios.get(`${API_URL}/api/registrations`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setRegistrations(data);
@@ -48,7 +49,7 @@ const AdminDashboard = () => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       const token = localStorage.getItem('adminToken');
-      await axios.patch(`http://localhost:5000/api/registrations/${id}/status`, { status: newStatus }, {
+      await axios.patch(`${API_URL}/api/registrations/${id}/status`, { status: newStatus }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchRegistrations();
@@ -60,7 +61,7 @@ const AdminDashboard = () => {
   const handleExport = (type) => {
     const token = localStorage.getItem('adminToken');
     const query = filterEvent !== 'All' ? `?event=${filterEvent}` : '';
-    const url = `http://localhost:5000/api/export/${type}${query}`;
+    const url = `${API_URL}/api/export/${type}${query}`;
     
     axios.get(url, {
       headers: { Authorization: `Bearer ${token}` },

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL } from '../config';
 import './RegistrationModal.css';
 
 const RegistrationModal = ({ isOpen, onClose, preSelectedEvent }) => {
@@ -77,7 +78,7 @@ const RegistrationModal = ({ isOpen, onClose, preSelectedEvent }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/registrations', {
+      const response = await axios.post(`${API_URL}/api/registrations`, {
         ...formData,
         teamMembers
       });
