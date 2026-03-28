@@ -83,14 +83,8 @@ const RegistrationModal = ({ isOpen, onClose, preSelectedEvent }) => {
         teamMembers
       });
       
+      
       setSuccess('Registration successful! Prepare for the games.');
-      setTimeout(() => {
-        onClose();
-        setSuccess('');
-        setError('');
-        setFormData({ name: '', email: '', phone: '', rollNumber: '', branch: '', year: '1st', event: 'General', teamName: '' });
-        setTeamMembers([]);
-      }, 3000);
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed. Please try again.');
     } finally {
@@ -98,10 +92,18 @@ const RegistrationModal = ({ isOpen, onClose, preSelectedEvent }) => {
     }
   };
 
+  const handleClose = () => {
+    onClose();
+    setSuccess('');
+    setError('');
+    setFormData({ name: '', email: '', phone: '', rollNumber: '', branch: '', year: '1st', event: 'General', teamName: '' });
+    setTeamMembers([]);
+  };
+
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="modal-close" onClick={onClose}>&times;</button>
+        <button className="modal-close" onClick={handleClose}>&times;</button>
         
         <div className="modal-header">
           <h2 className="font-squid">PLAYER <span style={{color: 'var(--pink)'}}>REGISTRATION</span></h2>
@@ -115,7 +117,10 @@ const RegistrationModal = ({ isOpen, onClose, preSelectedEvent }) => {
              <div style={{fontSize: '70px', color: 'var(--teal)', marginBottom: '20px', textShadow: '0 0 20px rgba(0,201,177,0.4)'}}>✓</div>
              <h2 className="font-squid" style={{color: 'var(--teal)', fontSize: '28px', marginBottom: '15px', letterSpacing: '2px'}}>REGISTRATION SUCCESSFUL</h2>
              <p className="font-orbitron" style={{color: 'var(--cream)', fontSize: '14px', lineHeight: '1.6'}}>{success}</p>
-             <button type="button" className="btn-primary font-squid" style={{marginTop:'40px', width: '100%'}} onClick={onClose}>RETURN TO ARENA</button>
+             <a href="/pronite" className="btn-primary font-squid" style={{marginTop:'30px', width: '100%', display: 'block', textDecoration: 'none', textAlign: 'center', background: 'linear-gradient(135deg, rgba(255,0,102,0.2), rgba(0,201,177,0.2))', border: '2px solid var(--pink)', padding: '16px', fontSize: '16px', letterSpacing: '3px', color: 'var(--white)', borderRadius: '4px', boxShadow: '0 0 20px rgba(255,0,102,0.15)'}}>
+               🎟️ GET PRONITE PASS
+             </a>
+             <button type="button" className="btn-primary font-squid" style={{marginTop:'12px', width: '100%', background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', color: 'var(--cream)', padding: '14px', fontSize: '14px'}} onClick={handleClose}>RETURN TO ARENA</button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="reg-form">

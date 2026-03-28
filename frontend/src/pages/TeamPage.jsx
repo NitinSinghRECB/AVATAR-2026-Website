@@ -13,17 +13,20 @@ const TeamPage = () => {
   ];
 
   const studentCoordinators = [
-    { role: 'Head Coordinators', names: 'Pradeep Chaudhary, Krishna Kant Singh' },
+    { role: 'Head Coordinators', names: 'Pradeep Chaudhary, Krishna Kant Singh'},
+    { role: 'Event Coordinator', names: 'Aditya Gautam'},
     { role: 'Prompt Engineering', names: 'Nitin Kumar Singh, Sanny Kumar' },
     { role: 'Cubic Puzzle', names: 'Divyansh Pandey, Saurabh Kumar Saroj' },
     { role: 'Treasure Hunt', names: 'Kshitij Rastogi, Abhishek Gangwar, Anand Bind, Yashnil Singh, Samarth Singh' },
     { role: 'Social Media Team', names: 'Ravi' },
     { role: 'Poster Design', names: 'Raghvendra Singh, Anivesh Tyagi' },
     { role: 'Robo Games', names: 'Lucky Singh, Samarth Gupta' },
-    { role: 'Circuit Craze', names: 'Harish Rajput' },
-    { role: 'Tinkercad Challenge', names: 'Aman Kumar, Arnav Singh' },
+    { role: 'Circuit Craze (Godown Wiring)', names: 'Harish Rajput , Pratham Jain' },
+    { role: 'Circuit Craze(Tinkercad Challeng)', names: 'Aman Kumar, Arnav Singh' },
     { role: 'Egg Drop Challenge', names: 'Gaurav Kumar, Sameer Diwakar, Abhishek Kannaujiya' },
     { role: 'Ideathon', names: 'Akhilesh Singh Yadav, Kshitij Rastogi' },
+    { role: 'Code Craft', names: 'Abhimanyu Singh, Nitin Kumar Singh' },
+    { role: 'Rocket Launcher', names: 'Pratham Jain, Sameer Deewakar , Divyansh Pandey, Yashnil Singh, Abhishek Gangwar' },
   ];
 
   const volunteers = [
@@ -32,7 +35,7 @@ const TeamPage = () => {
     'Manish Nishad', 'Namrata Tiwari', 'Chhatrasal Singh', 'Ishan Kumar', 'Mohit Kumar', 
     'Saurabh Kumar Singh', 'Anand Kumar', 'Dubey Ankit Dilip', 'Astha Gupta', 
     'Nandini Chaturvedi', 'Anil Kumar', 'Shubham Yadav', 'Asha Gautam', 'Raksha', 
-    'Himanshi Verma', 'Meera'
+    'Himanshi Verma', 'Meera','Shubham Yadav'
   ];
 
   return (

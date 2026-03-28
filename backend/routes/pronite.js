@@ -13,11 +13,15 @@ router.post('/register', async (req, res) => {
   try {
     const { name, email, phone, branch, year } = req.body;
 
-    // Check if email has registered for any event
+    // Check if email has registered for any event (as main registrant OR as a team member)
     const eventRegistration = await Registration.findOne({ email });
-    if (!eventRegistration) {
+    const teamRegistration = await Registration.findOne({ 'teamMembers.email': email });
+    
+    const foundRegistration = eventRegistration || teamRegistration;
+    
+    if (!foundRegistration) {
       return res.status(400).json({ 
-        message: 'You must register for at least one event before getting a ProNite Pass. Register for an event first!' 
+        message: 'You must register for at least one event (or be a team member) before getting a ProNite Pass. Register for an event first!' 
       });
     }
 
@@ -40,7 +44,7 @@ router.post('/register', async (req, res) => {
       branch,
       year,
       passId,
-      registeredEvent: eventRegistration.event
+      registeredEvent: foundRegistration.event
     });
 
     res.status(201).json(pass);

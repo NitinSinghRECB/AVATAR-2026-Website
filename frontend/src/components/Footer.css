@@ -117,6 +117,35 @@ footer {
   font-size: 13px;
 }
 
+.footer-devs {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+.dev-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+.dev-link:hover {
+  color: var(--pink);
+  border-color: rgba(255,0,102,0.3);
+  opacity: 1;
+  box-shadow: 0 0 12px rgba(255,0,102,0.15);
+  transform: translateY(-2px);
+}
+
 @media(max-width: 992px) {
   .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
   .footer-brand { grid-column: 1 / -1; }
