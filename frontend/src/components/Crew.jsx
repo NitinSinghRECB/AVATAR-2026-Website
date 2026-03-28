@@ -3,10 +3,9 @@ import './Crew.css';
 
 const Crew = () => {
   const teamMembers = [
-    { name: 'VIP VIP-2023', role: 'Faculty Coordinator', img: '/admin-avatar.png', color: 'pink' },
-    { name: 'Dr. VIP', role: 'Convener', img: '/admin-avatar.png', color: 'teal' },
-    { name: 'Mr. VIP', role: 'Student Coordinator', img: '/admin-avatar.png', color: 'pink' },
-    { name: 'Ms. VIP', role: 'Tech Lead', img: '/admin-avatar.png', color: 'teal' },
+    { name: 'Mr. Abhijeet Singh', role: 'Faculty Coordinator', img: '/admin-avatar.png', color: 'pink' },
+    { name: 'Dr. Pushpendra Singh', role: 'Convener', img: '/admin-avatar.png', color: 'teal' },
+    { name: 'Dr. Siddhartha Kumar Arjaria', role: 'Student Coordinator', img: '/admin-avatar.png', color: 'pink' },
   ];
 
   return (

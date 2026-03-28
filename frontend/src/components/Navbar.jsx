@@ -11,7 +11,7 @@ const Navbar = ({ onRegisterClick }) => {
   return (
     <>
       <nav>
-        <a href="#hero" className="nav-logo">
+        <a href="/#hero" className="nav-logo">
           <div className="logo-group" style={{display: 'flex', gap: '8px', alignItems: 'center', marginRight: '15px'}}>
             <img src="/rec-logo.png" alt="REC Logo" style={{height: '35px', width: 'auto'}} />
             <img src="/iic-logo.png" alt="IIC Logo" style={{height: '35px', width: 'auto', background: 'white', padding: '2px', borderRadius: '4px'}} />
@@ -21,11 +21,11 @@ const Navbar = ({ onRegisterClick }) => {
         </a>
         
         <ul className="nav-links nav-reg-desktop">
-          <li><a href="#about">About</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#timeline">Schedule</a></li>
-          <li><a href="#crew">Team</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#events">Events</a></li>
+          <li><a href="/#timeline">Schedule</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/#faq">FAQ</a></li>
           <li>
             <button onClick={() => onRegisterClick()} className="nav-register-btn font-squid">
               Register Now
@@ -43,12 +43,12 @@ const Navbar = ({ onRegisterClick }) => {
       </nav>
 
       <div className="nav-mobile-menu" style={{ display: isMobileMenuOpen ? 'flex' : 'none' }}>
-        <a href="#about" onClick={toggleMobileMenu}>About</a>
-        <a href="#events" onClick={toggleMobileMenu}>Events</a>
-        <a href="#timeline" onClick={toggleMobileMenu}>Schedule</a>
-        <a href="#crew" onClick={toggleMobileMenu}>Team</a>
-        <a href="#location" onClick={toggleMobileMenu}>Location</a>
-        <a href="#faq" onClick={toggleMobileMenu}>FAQ</a>
+        <a href="/#about" onClick={toggleMobileMenu}>About</a>
+        <a href="/#events" onClick={toggleMobileMenu}>Events</a>
+        <a href="/#timeline" onClick={toggleMobileMenu}>Schedule</a>
+        <a href="/team" onClick={toggleMobileMenu}>Team</a>
+        <a href="/#location" onClick={toggleMobileMenu}>Location</a>
+        <a href="/#faq" onClick={toggleMobileMenu}>FAQ</a>
         <button className="mobile-reg-btn font-squid" onClick={() => { toggleMobileMenu(); onRegisterClick(); }}>
           Register Now
         </button>
