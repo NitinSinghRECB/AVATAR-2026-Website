@@ -58,6 +58,19 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleDelete = async (id, name) => {
+    if (!window.confirm(`⚠️ ELIMINATE player "${name}"?\n\nThis action cannot be undone.`)) return;
+    try {
+      const token = localStorage.getItem('adminToken');
+      await axios.delete(`${API_URL}/api/registrations/${id}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      fetchRegistrations();
+    } catch (err) {
+      alert('Failed to delete registration');
+    }
+  };
+
   const handleExport = (type) => {
     const token = localStorage.getItem('adminToken');
     const query = filterEvent !== 'All' ? `?event=${filterEvent}` : '';
@@ -192,14 +205,24 @@ const AdminDashboard = () => {
                         </span>
                       </td>
                       <td>
-                        <select 
-                          value={reg.status} 
-                          onChange={(e) => handleStatusChange(reg._id, e.target.value)}
-                          className={`action-select ${reg.status}`}
-                        >
-                          <option value="pending">PENDING</option>
-                          <option value="approved">APPROVED</option>
-                        </select>
+                        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                          <select 
+                            value={reg.status} 
+                            onChange={(e) => handleStatusChange(reg._id, e.target.value)}
+                            className={`action-select ${reg.status}`}
+                          >
+                            <option value="pending">PENDING</option>
+                            <option value="approved">APPROVED</option>
+                            <option value="rejected">REJECTED</option>
+                          </select>
+                          <button 
+                            className="delete-btn"
+                            onClick={() => handleDelete(reg._id, reg.name)}
+                            title="Delete this registration"
+                          >
+                            ✕
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))

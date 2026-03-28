@@ -86,4 +86,22 @@ router.patch('/:id/status', protect, async (req, res) => {
   }
 });
 
+// @desc    Delete a registration
+// @route   DELETE /api/registrations/:id
+// @access  Private
+router.delete('/:id', protect, async (req, res) => {
+  try {
+    const registration = await Registration.findById(req.params.id);
+
+    if (registration) {
+      await registration.deleteOne();
+      res.json({ message: 'Registration deleted' });
+    } else {
+      res.status(404).json({ message: 'Registration not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 module.exports = router;
