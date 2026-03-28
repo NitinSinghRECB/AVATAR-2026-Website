@@ -2,26 +2,26 @@ import React, { useEffect, useRef } from 'react';
 import './Timeline.css';
 
 const schedule = [
-  { day: 'Day 1', date: 'April 12',
+  { day: 'Day 1', date: 'April 7',
     events: [
-      { time: '09:00 AM', title: 'Opening Ceremony', location: 'Main Auditorium', icon: 'circle' },
-      { time: '11:00 AM', title: 'Code Run - Round 1', location: 'Lab 1 & 2', icon: 'square' },
-      { time: '02:00 PM', title: 'Robo Wars - Heats', location: 'Ground', icon: 'triangle' },
-      { time: '05:00 PM', title: 'Cultural Eve', location: 'Main Stage', icon: 'circle' },
+      { time: '09:00 AM', title: 'Inauguration & Opening', location: 'Main Auditorium', icon: 'circle' },
+      { time: '10:00 AM', title: 'Cubic Puzzle', location: 'SAC', icon: 'square' },
+      { time: '11:00 AM', title: 'Stick Build', location: 'TBD', icon: 'triangle' },
+      { time: '11:30 AM', title: 'Poster Design', location: 'Computer Center', icon: 'circle' },
+      { time: '12:00 PM', title: 'Prompt Engineering', location: 'Computer Center', icon: 'square' },
+      { time: '02:00 PM', title: 'Circuit Craze', location: 'Computer Center', icon: 'triangle' },
+      { time: '03:30 PM', title: 'Robo Race', location: 'Outside SAC', icon: 'circle' },
+      { time: '04:30 PM', title: 'Treasure Hunt', location: 'Campus Wide', icon: 'square' },
     ]
   },
-  { day: 'Day 2', date: 'April 13',
+  { day: 'Day 2', date: 'April 8',
     events: [
-      { time: '10:00 AM', title: 'Hackathon Begins', location: 'Innovation Hub', icon: 'square' },
-      { time: '12:00 PM', title: 'BGMI Semi-Finals', location: 'E-Sports Arena', icon: 'triangle' },
-      { time: '06:00 PM', title: 'EDM Night', location: 'Main Stage', icon: 'circle' },
-    ]
-  },
-  { day: 'Day 3', date: 'April 14',
-    events: [
-      { time: '10:00 AM', title: 'Hackathon Judging', location: 'Innovation Hub', icon: 'circle' },
-      { time: '02:00 PM', title: 'Robo Wars Finals', location: 'Ground', icon: 'square' },
-      { time: '05:00 PM', title: 'Valedictory & Prize Dist.', location: 'Main Auditorium', icon: 'triangle' },
+      { time: '09:30 AM', title: 'Ideathon', location: 'TBD', icon: 'triangle' },
+      { time: '11:00 AM', title: 'Tower of Hanoi', location: 'TBD', icon: 'circle' },
+      { time: '11:45 AM', title: 'CodeCraft', location: 'Computer Center', icon: 'square' },
+      { time: '02:00 PM', title: 'Rocket Launcher', location: 'Grounds', icon: 'triangle' },
+      { time: '03:30 PM', title: 'Egg Drop Challenge', location: 'Tech Block', icon: 'square' },
+      { time: '06:00 PM', title: 'Grand Finale & Prizes', location: 'Main Stage', icon: 'circle' },
     ]
   }
 ];

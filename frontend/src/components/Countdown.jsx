@@ -7,8 +7,8 @@ const Countdown = () => {
   });
 
   useEffect(() => {
-    // Target date: April 12, 2026
-    const targetDate = new Date("April 12, 2026 00:00:00").getTime();
+    // Target date: April 7, 2026 09:00 AM
+    const targetDate = new Date("April 7, 2026 09:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Events.css';
 
 const eventsList = [
@@ -26,6 +27,7 @@ const EventIcon = ({ type, color }) => {
 
 const Events = ({ onRegisterClick }) => {
   const [filter, setFilter] = useState('All');
+  const navigate = useNavigate();
 
   const categories = ['All', 'Technical', 'E-Sports', 'Cultural'];
 
@@ -74,8 +76,8 @@ const Events = ({ onRegisterClick }) => {
                 </div>
               </div>
               
-              <button className="event-action font-squid" onClick={() => onRegisterClick(event.title)}>
-                REGISTER <span>▸</span>
+              <button className="event-action font-squid" onClick={() => navigate(`/event/${event.id}`)}>
+                VIEW DETAILS <span>▸</span>
               </button>
             </div>
             
