@@ -334,5 +334,29 @@ export const eventDetailsData = {
     ],
     coordinators: ["Pradeep Chaudhary"],
     volunteers: ["Ali Ashab Shah", "Prashant Kumar"]
+  },
+  "aerofury": {
+    id: "aerofury",
+    registerId: "AEROFURY",
+    title: "AEROFURY",
+    type: "Drone Racing Challenge",
+    color: "teal",
+    themeRule: "Navigate the obstacle course with precision and speed.",
+    venue: "Main Ground",
+    date: "8th April 2026",
+    time: "04:00 PM",
+    teamSize: "Max 4",
+    rules: [
+      "A high-speed drone racing challenge.",
+      "Participants navigate drones through a technical obstacle course.",
+      "The event tests precision control, reflexes, and understanding of flight dynamics under time pressure."
+    ],
+    judgingCriteria: [
+      "Completion Time",
+      "Obstacle Clearance",
+      "Flight Dynamics & Control"
+    ],
+    coordinators: [],
+    volunteers: []
   }
 };

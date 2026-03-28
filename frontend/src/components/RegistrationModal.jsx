@@ -33,8 +33,11 @@ const RegistrationModal = ({ isOpen, onClose, preSelectedEvent }) => {
   };
 
   const addTeamMember = () => {
-    if (teamMembers.length < 4) {
+    const maxAdditionalMembers = formData.event === 'AEROFURY' ? 3 : 4;
+    if (teamMembers.length < maxAdditionalMembers) {
       setTeamMembers([...teamMembers, { name: '', email: '' }]);
+    } else {
+      setError(`Maximum ${maxAdditionalMembers + 1} participants allowed for ${formData.event}.`);
     }
   };
 

@@ -16,6 +16,7 @@ const eventsList = [
   { id: 'rocket', title: 'ROCKET LAUNCHER', type: 'Aerospace + Engineering', desc: 'Physics, Propulsion, Launch Mechanics.', icon: 'triangle', color: 'pink', teamSize: 'Open', time: 'Day 2 - 02:00 PM' },
   { id: 'prompt', title: 'PROMPT ENGINEERING', type: 'AI + Creativity', desc: 'AI Interaction, Logical Thinking, Creativity.', icon: 'square', color: 'teal', teamSize: 'Solo', time: 'Day 1 - 12:00 PM' },
   { id: 'hanoi', title: 'TOWER OF HANOI', type: 'Fun Activity', desc: 'Logical puzzle and fun brain challenge.', icon: 'circle', color: 'pink', teamSize: 'Solo', time: 'Day 2 - 11:00 AM' },
+  { id: 'aerofury', title: 'AEROFURY', type: 'Drone Racing', desc: 'High-speed drone racing and obstacle navigation.', icon: 'triangle', color: 'teal', teamSize: 'Max 4', time: 'Day 2 - 04:00 PM' },
 ];
 
 const EventIcon = ({ type, color }) => {
