@@ -16,7 +16,11 @@ const PORT = process.env.PORT || 5000;
 // Security Middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173', // Allow local dev
+  origin: [
+    'http://localhost:5173', 
+    'https://avatar-2026-website-1.onrender.com', 
+    'https://avatar-2026.netlify.app'
+  ],
   credentials: true,
   exposedHeaders: ['Content-Disposition']
 }));
@@ -34,6 +38,16 @@ app.use(express.json());
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/avatar26')
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log('MongoDB Connection Error: ', err));
+
+// Health Check Route
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'AVATAR 2026 Backend API is running smoothly!',
+    version: '1.0.0',
+    timestamp: new Date().toISOString()
+  });
+});
 
 // API Routes
 app.use('/api/auth', authRoutes);
