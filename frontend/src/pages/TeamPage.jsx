@@ -14,7 +14,7 @@ const TeamPage = () => {
 
   const studentCoordinators = [
     { role: 'Organizer', names: 'Aditya Gautam'},
-    { role: 'Head Coordinators', names: 'Md. Lokesh Khan'},
+    { role: 'Head Coordinators', names: 'Pradeep Chaudhary, Krishna Kant Singh'},
     { role: 'Code Craft', names: 'Abhimanyu Singh, Nitin Kumar Singh' },
     { role: 'Prompt Engineering', names: 'Nitin Kumar Singh, Sanny Kumar' },
     { role: 'Cubic Puzzle', names: 'Divyansh Pandey, Saurabh Kumar Saroj' },
