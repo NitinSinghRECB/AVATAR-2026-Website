@@ -124,7 +124,7 @@ export const eventDetailsData = {
     judgingCriteria: [
       "First team to correctly decipher all clues and retrieve the treasure wins."
     ],
-    coordinators: ["Kshitij Rastogi", "Abhishek Gangwar", "Anand Bind", "Yashnil Singh", "Samarth Singh"],
+    coordinators: [ "Pratham Singh", "Kshitij Rastogi", "Abhishek Gangwar", "Anand Bind", "Yashnil Singh"],
     volunteers: ["Ali Ashab Shah", "Prashant Kumar", "Rovins Nigam", "Nitin Verma", "Himanshi Verma", "Kirti Yadav"]
   },
   "eggdrop": {
